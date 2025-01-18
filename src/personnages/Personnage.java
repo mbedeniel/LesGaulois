@@ -14,21 +14,22 @@ public abstract class Personnage {
 	}
 
 	public void parler(String texte) {
-		System.out.println("Le "+donnerAuteur() +" "+ nom + " : <<" + texte + ">>");
+		System.out.println("Le " + donnerAuteur() + " " + nom + " : << " + texte + " >>.");
 	}
 
 	public void frapper(Personnage personnage) {
-		System.out.println("Le "+donnerAuteur()+" "+getNom()+" donne un grand coup au "+personnage.donnerAuteur()+" "+personnage.getNom()+".");
+		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup au "
+				+ personnage.donnerAuteur() + " " + personnage.getNom() + ".");
 		personnage.recevoirCoup(force / 3);
 	}
 
 	public void recevoirCoup(int coup) {
 		force -= coup;
 		if (force > 0) {
-			System.out.println("Le "+donnerAuteur()+" "+getNom()+" : << Aïe >>. ");
+			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << Aï¿½e >>. ");
 		} else {
 			force = 0;
-			System.out.println("Le "+donnerAuteur()+" "+getNom()+" : << J’abandonne… >>.");
+			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << Jï¿½abandonneï¿½ >>.");
 		}
 	}
 
