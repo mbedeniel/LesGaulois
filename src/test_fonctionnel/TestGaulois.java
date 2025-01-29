@@ -1,5 +1,6 @@
 package test_fonctionnel;
 
+import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Grade;
 import personnages.Soldat;
@@ -30,7 +31,7 @@ public class TestGaulois {
 		/******** TP2 ********/
 		/*******************/
 
-		Gaulois vercingetorix = new Gaulois("Vercingétorix", 5);
+		/*Gaulois vercingetorix = new Gaulois("Vercingétorix", 5);
 		Village village = new Village(vercingetorix);
 		Soldat minus = new Soldat("Minus", 2, Grade.SOLDAT);
 		Camp camp = new Camp(minus);
@@ -57,7 +58,7 @@ public class TestGaulois {
 
 		village.changerChef(abraracourcix);
 		camp.changerCommandant(briseradius);
-		camp.changerCommandant(chorus);
+		camp.changerCommandant(chorus);*/
 
 		/*
 		 * Lorsque l'on redefini une classe, la redefinition doit etre private ou public
@@ -68,5 +69,37 @@ public class TestGaulois {
 		 * Dans mes tableau j'ai utulisé un private static final int pour la taille de
 		 * mes tableaux es ce que cela est correct ?
 		 */
+		
+		/*******************/
+		/******** TP3 ******/
+		/*******************/
+		
+		Druide panoramix = new Druide("panoramix", 0); 
+		panoramix.fabriquerPotionMagique(3, 2, 6);
+		
+		Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
+
+		Gaulois asterix = new Gaulois("Asterix", 5);
+		Gaulois obelix = new Gaulois("Obelix", 15);
+		Gaulois assurancetourix = new Gaulois("Assurancetourix", 2);
+		Gaulois abraracourcix = new Gaulois("abraracourcix", 5);
+		Gaulois agecanonix =  new Gaulois("Agecanonix", 1);
+		
+		panoramix.boosterGaulois(asterix);
+		panoramix.boosterGaulois(obelix);
+		panoramix.boosterGaulois(assurancetourix);
+		panoramix.boosterGaulois(abraracourcix);
+		panoramix.boosterGaulois(agecanonix);
+		
+		asterix.parler(" Bonjour � tous");
+		
+		minus.parler("UN GAU... UN GAUGAU...");
+		asterix.frapperPotion(minus);
+		minus.frapper(asterix);
+		asterix.frapperPotion(minus);
+		minus.frapper(asterix);
+		asterix.frapperPotion(minus);
+		
+		
 	}
 }

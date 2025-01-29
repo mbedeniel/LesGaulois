@@ -12,7 +12,7 @@ public class Camp {
 
 	public Camp(Soldat commandant) {
 
-		commandant.parler("Je suis en charge de créer un nouveau camp romain.");
+		commandant.parler("Je suis en charge de creer un nouveau camp romain.");
 		this.commandant = commandant;
 	}
 
@@ -21,24 +21,24 @@ public class Camp {
 	}
 
 	public boolean changerCommandant(Soldat commandant) {
-		if (commandant.getGrade().equals(Grade.CENTURION)) {
+		boolean changementEffectue = commandant.getGrade().equals(Grade.CENTURION);
+		if (changementEffectue) {
 			this.commandant = commandant;
 			commandant.parler("Moi " + commandant.getNom() + " je prends la direction du camp romain.");
-			return true;
 		}
 		commandant.parler("Je ne suis pas suffisamment gradé pour prendre la direction du camp romain.");
-		return false;
+		return changementEffectue;
 	}
 
 	public boolean ajouterSoldat(Soldat soldat) {
-		if (nbSoldats < TAILLE_CAMP) {
+		boolean ajoutEffectue = nbSoldats < TAILLE_CAMP;
+		if (ajoutEffectue) {
 			lesSoldats[nbSoldats] = soldat;
 			soldat.parler("Je mets mon épée au service de Rome dans le camp dirigé par " + getCommandant().getNom());
 			nbSoldats++;
-			return true;
 		}
 		commandant.parler("Désolé Ballondebaudrus notre camp est complet !");
-		return false;
+		return ajoutEffectue;
 	}
 
 	public void afficherCamp() {

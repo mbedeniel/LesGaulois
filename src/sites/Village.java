@@ -24,14 +24,14 @@ public class Village {
 	}
 
 	public boolean ajouterVillageois(Gaulois gaulois) {
-		if (nbGaulois < TAILLE_VILLAGE) {
+		boolean ajoutEffectue = nbGaulois < TAILLE_VILLAGE;
+		if (ajoutEffectue) {
 			lesGaulois[nbGaulois] = gaulois;
 			chef.parler("Bienvenue " + gaulois.getNom() + " !");
 			nbGaulois++;
-			return true;
 		}
 		chef.parler("Désolé " + gaulois.getNom() + " mon village est déjà bien rempli.");
-		return false;
+		return ajoutEffectue;
 	}
 
 	public void afficherVillageois() {

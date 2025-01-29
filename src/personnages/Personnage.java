@@ -26,10 +26,10 @@ public abstract class Personnage {
 	public void recevoirCoup(int coup) {
 		force -= coup;
 		if (force > 0) {
-			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << A�e >>. ");
+			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << Aie >>. ");
 		} else {
 			force = 0;
-			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << J�abandonne� >>.");
+			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << J abandonne ... >>.");
 		}
 	}
 
