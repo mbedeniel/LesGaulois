@@ -91,7 +91,8 @@ public class TestGaulois {
 		panoramix.boosterGaulois(abraracourcix);
 		panoramix.boosterGaulois(agecanonix);
 		
-		asterix.parler(" Bonjour à tous");
+		asterix.parler(" Bonjour à tous ");
+		System.out.println("");
 		
 		minus.parler("UN GAU... UN GAUGAU...");
 		asterix.frapperPotion(minus);

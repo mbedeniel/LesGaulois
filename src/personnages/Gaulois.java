@@ -23,7 +23,6 @@ public class Gaulois extends Personnage {
 		boolean frapperPotion = effetPotion > 1;
 		frapper(romain);
 		romain.recevoirCoup(force*effetPotion);
-		System.out.println(effetPotion);
 		if(frapperPotion) {
 			effetPotion -= 0.5;
 		}
