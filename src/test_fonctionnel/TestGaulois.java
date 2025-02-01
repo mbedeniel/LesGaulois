@@ -1,5 +1,7 @@
 package test_fonctionnel;
 
+import objets.Equipement;
+import objets.NomEquipement;
 import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Grade;
@@ -74,7 +76,7 @@ public class TestGaulois {
 		/******** TP3 ******/
 		/*******************/
 		
-		Druide panoramix = new Druide("panoramix", 0); 
+		/*Druide panoramix = new Druide("panoramix", 0); 
 		panoramix.fabriquerPotionMagique(3, 2, 6);
 		
 		Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
@@ -93,6 +95,42 @@ public class TestGaulois {
 		
 		asterix.parler(" Bonjour a tous ");
 		System.out.println("");
+		
+		minus.parler("UN GAU... UN GAUGAU...");
+		for(int i=0;i<3;i++) {
+			if(asterix.continuerCombat(minus)) {
+				asterix.frapperPotion(minus);
+			}
+			if(minus.continuerCombat(asterix)) {
+				minus.frapper(asterix);
+			}
+		}*/
+		
+		/*******************/
+		/******** TP4 ******/
+		/*******************/
+		Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
+		minus.sequiper(new Equipement(NomEquipement.BOUCLIER));
+		minus.sequiper(new Equipement(NomEquipement.CASQUE));
+		minus.sequiper(new Equipement(NomEquipement.PLASTRON));
+		
+		
+		Druide panoramix = new Druide("panoramix", 0); 
+		panoramix.fabriquerPotionMagique(3, 2, 6);
+
+		Gaulois asterix = new Gaulois("Asterix", 5);
+		Gaulois obelix = new Gaulois("Obelix", 15);
+		Gaulois assurancetourix = new Gaulois("Assurancetourix", 2);
+		Gaulois abraracourcix = new Gaulois("abraracourcix", 5);
+		Gaulois agecanonix =  new Gaulois("Agecanonix", 1);
+		
+		panoramix.boosterGaulois(asterix);
+		panoramix.boosterGaulois(obelix);
+		panoramix.boosterGaulois(assurancetourix);
+		panoramix.boosterGaulois(abraracourcix);
+		panoramix.boosterGaulois(agecanonix);
+		
+		asterix.parler(" Bonjour a tous ");
 		
 		minus.parler("UN GAU... UN GAUGAU...");
 		for(int i=0;i<3;i++) {
