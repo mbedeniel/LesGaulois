@@ -21,8 +21,10 @@ public class Gaulois extends Personnage {
 	
 	public boolean frapperPotion(Romain romain) {
 		boolean frapperPotion = effetPotion > 1;
-		frapper(romain);
-		romain.recevoirCoup(force*effetPotion);
+		int forceBooste = force*effetPotion; 
+		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup de force "+forceBooste+" au "
+				+ romain.donnerAuteur() + " " + romain.getNom() + ".");
+		romain.recevoirCoup(forceBooste);
 		if(frapperPotion) {
 			effetPotion -= 0.5;
 		}
@@ -30,7 +32,7 @@ public class Gaulois extends Personnage {
 	}
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Ast�rix", 8);
+		Gaulois asterix = new Gaulois("Asterix", 8);
 		System.out.println("main C :" + asterix.getNom());
 		asterix.parler("BONJOUR");
 	}

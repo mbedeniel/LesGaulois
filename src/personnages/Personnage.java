@@ -18,7 +18,7 @@ public abstract class Personnage {
 	}
 
 	public void frapper(Personnage personnage) {
-		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup au "
+		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup de force " + force + " au "
 				+ personnage.donnerAuteur() + " " + personnage.getNom() + ".");
 		personnage.recevoirCoup(force / 3);
 	}
@@ -31,6 +31,10 @@ public abstract class Personnage {
 			force = 0;
 			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << J abandonne ... >>.");
 		}
+	}
+
+	public boolean continuerCombat(Personnage personnage) {
+		return force > 0 && personnage.force > 0;
 	}
 
 	protected abstract String donnerAuteur();

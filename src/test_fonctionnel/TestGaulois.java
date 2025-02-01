@@ -91,15 +91,18 @@ public class TestGaulois {
 		panoramix.boosterGaulois(abraracourcix);
 		panoramix.boosterGaulois(agecanonix);
 		
-		asterix.parler(" Bonjour à tous ");
+		asterix.parler(" Bonjour a tous ");
 		System.out.println("");
 		
 		minus.parler("UN GAU... UN GAUGAU...");
-		asterix.frapperPotion(minus);
-		minus.frapper(asterix);
-		asterix.frapperPotion(minus);
-		minus.frapper(asterix);
-		asterix.frapperPotion(minus);
+		for(int i=0;i<3;i++) {
+			if(asterix.continuerCombat(minus)) {
+				asterix.frapperPotion(minus);
+			}
+			if(minus.continuerCombat(asterix)) {
+				minus.frapper(asterix);
+			}
+		}
 		
 		
 	}
