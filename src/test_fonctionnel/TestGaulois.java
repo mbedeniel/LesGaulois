@@ -74,10 +74,42 @@ public class TestGaulois {
 		/******** TP3 ******/
 		/*******************/
 
-		/*Druide panoramix = new Druide("panoramix", 0);
-		panoramix.fabriquerPotionMagique(3, 2, 6);
+		/*
+		 * Druide panoramix = new Druide("panoramix", 0);
+		 * panoramix.fabriquerPotionMagique(3, 2, 6);
+		 * 
+		 * Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
+		 * 
+		 * Gaulois asterix = new Gaulois("Asterix", 5); Gaulois obelix = new
+		 * Gaulois("Obelix", 15); Gaulois assurancetourix = new
+		 * Gaulois("Assurancetourix", 2); Gaulois abraracourcix = new
+		 * Gaulois("abraracourcix", 5); Gaulois agecanonix = new Gaulois("Agecanonix",
+		 * 1);
+		 * 
+		 * panoramix.boosterGaulois(asterix); panoramix.boosterGaulois(obelix);
+		 * panoramix.boosterGaulois(assurancetourix);
+		 * panoramix.boosterGaulois(abraracourcix);
+		 * panoramix.boosterGaulois(agecanonix);
+		 * 
+		 * asterix.parler(" Bonjour a tous "); System.out.println("");
+		 * 
+		 * minus.parler("UN GAU... UN GAUGAU..."); for (int i = 0; i < 3; i++) { if
+		 * (asterix.getForce() > 0 && minus.getForce() > 0) { asterix.frapper(minus); }
+		 * if (asterix.getForce() > 0 && minus.getForce() > 0) { minus.frapper(asterix);
+		 * } }
+		 */
+
+		/*******************/
+		/******** TP3 ******/
+		/*******************/
 
 		Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
+		minus.sequiper(Equipement.BOUCLIER);
+		minus.sequiper(Equipement.CASQUE);
+		minus.sequiper(Equipement.PLASTRON);
+
+		Druide panoramix = new Druide("panoramix", 0);
+		panoramix.fabriquerPotionMagique(3, 2, 6);
 
 		Gaulois asterix = new Gaulois("Asterix", 5);
 		Gaulois obelix = new Gaulois("Obelix", 15);
@@ -92,7 +124,6 @@ public class TestGaulois {
 		panoramix.boosterGaulois(agecanonix);
 
 		asterix.parler(" Bonjour a tous ");
-		System.out.println("");
 
 		minus.parler("UN GAU... UN GAUGAU...");
 		for (int i = 0; i < 3; i++) {
@@ -102,37 +133,7 @@ public class TestGaulois {
 			if (asterix.getForce() > 0 && minus.getForce() > 0) {
 				minus.frapper(asterix);
 			}
-		}*/
-
-		/*******************/
-		/******** TP3 ******/
-		/*******************/
-		
-		 Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
-		 minus.sequiper(Equipement.BOUCLIER); minus.sequiper(Equipement.CASQUE);
-		 minus.sequiper(Equipement.PLASTRON);
-		  
-		  
-		  Druide panoramix = new Druide("panoramix", 0);
-		  panoramix.fabriquerPotionMagique(3, 2, 6);
-		  
-		  Gaulois asterix = new Gaulois("Asterix", 5); Gaulois obelix = new
-		  Gaulois("Obelix", 15); Gaulois assurancetourix = new
-		 Gaulois("Assurancetourix", 2); Gaulois abraracourcix = new
-		  Gaulois("abraracourcix", 5); Gaulois agecanonix = new Gaulois("Agecanonix",
-		  1);
-		  
-		  panoramix.boosterGaulois(asterix); panoramix.boosterGaulois(obelix);
-		  panoramix.boosterGaulois(assurancetourix);
-		  panoramix.boosterGaulois(abraracourcix);
-		  panoramix.boosterGaulois(agecanonix);
-		  
-		  asterix.parler(" Bonjour a tous ");
-		  
-		  minus.parler("UN GAU... UN GAUGAU..."); for(int i=0;i<3;i++) {
-		  if(asterix.getForce() > 0 && minus.getForce() > 0) { asterix.frapper(minus); }
-		  if(asterix.getForce() > 0 && minus.getForce() > 0) { minus.frapper(asterix); } }
-		 
+		}
 
 	}
 }

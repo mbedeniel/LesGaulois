@@ -1,11 +1,10 @@
 package objets;
 
-
 public class Potion {
 	private int dose;
 	private int force;
-	
-	public Potion(int dose,int force) {
+
+	public Potion(int dose, int force) {
 		this.dose = dose;
 		this.force = force;
 	}
@@ -19,7 +18,7 @@ public class Potion {
 		}
 		return forceDose;
 	}
-	
+
 	public boolean resteDose() {
 		return dose > 0;
 	}

@@ -17,11 +17,10 @@ public class Soldat extends Romain {
 		return nbEquipement;
 	}
 
-	
 	public Grade getGrade() {
 		return grade;
 	}
-	
+
 	@Override
 	public void recevoirCoup(int coup) {
 		Equipement equipement;
