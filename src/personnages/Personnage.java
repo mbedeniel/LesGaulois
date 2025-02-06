@@ -16,14 +16,7 @@ public abstract class Personnage {
 	}
 
 	public void parler(String texte) {
-		String status;
-		if (this instanceof Soldat) {
-			Soldat soldat = (Soldat) this;
-			status = new String((soldat.getGrade()).toString());
-		} else {
-			status = donnerAuteur();
-		}
-		System.out.println("Le " + status + " " + nom + " : << " + texte + " >>.");
+		System.out.println("Le " + donnerAuteur() + " " + nom + " : << " + texte + " >>.");
 	}
 
 	public void frapper(Personnage personnage) {
@@ -32,21 +25,6 @@ public abstract class Personnage {
 	}
 
 	public void recevoirCoup(int coup) {
-
-		if (this instanceof Soldat) {
-			Soldat soldat = (Soldat) this;
-			Equipement equipement;
-			int quantiteAbsorde;
-			for (int i = 0; i < soldat.getNbEquipement() && coup >= 0; i++) {
-				equipement = soldat.getEquipements()[i];
-				quantiteAbsorde = equipement.getDiminueCoup();
-				System.out.println("Le " + equipement.getNomEquipement().toString() + " absorbe " + quantiteAbsorde + " du coup");
-				coup -= quantiteAbsorde;
-			}
-			if (coup < 0) {
-				coup = 0;
-			}
-		}
 
 		force -= coup;
 

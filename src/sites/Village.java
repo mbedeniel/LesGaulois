@@ -9,7 +9,7 @@ public class Village {
 	private static final int TAILLE_VILLAGE = 4;
 
 	public Village(Gaulois chef) {
-		chef.parler("Je suis un grand guerrier et je vais créer mon village");
+		chef.parler("Je suis un grand guerrier et je vais creer mon village");
 		this.chef = chef;
 	}
 
@@ -30,12 +30,12 @@ public class Village {
 			chef.parler("Bienvenue " + gaulois.getNom() + " !");
 			nbGaulois++;
 		}
-		chef.parler("Désolé " + gaulois.getNom() + " mon village est déjà bien rempli.");
+		chef.parler("Desolee " + gaulois.getNom() + " mon village est deja� bien rempli.");
 		return ajoutEffectue;
 	}
 
 	public void afficherVillageois() {
-		System.out.println("Le village de " + getChef().getNom() + " est habité par : ");
+		System.out.println("Le village de " + getChef().getNom() + " est habite par : ");
 		for (int i = 0; i < nbGaulois; i++) {
 			System.out.println("- " + lesGaulois[i].getNom());
 		}

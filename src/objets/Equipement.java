@@ -1,33 +1,35 @@
 package objets;
 
-public class Equipement {
-	private NomEquipement nomEquipement;
-	private int diminueCoup;
-	private static final int BOUCLIER_DIMINUE_COUP = 3;
-	private static final int CASQUE_DIMINUE_COUP = 2;
-	private static final int PLASTRON_DIMINUE_COUP = 3;
-
-	public NomEquipement getNomEquipement() {
-		return nomEquipement;
+public enum Equipement {
+	CASQUE("casque",3), 
+	PLASTRON("plastron",2), 
+	BOUCLIER("bouclier",3);
+	
+	private String nom;
+	private int diminueCoup ;
+	
+	private Equipement (String nomEquipement,int diminueCoup) {
+		this.nom = nomEquipement;
+		this.setDiminueCoup(diminueCoup);
 	}
+	
+	
+	public String getNom() {
+		return nom;
+	}
+	
 
 	public int getDiminueCoup() {
 		return diminueCoup;
 	}
 
-	public Equipement(NomEquipement nomEquipement) {
-		this.nomEquipement = nomEquipement;
-		switch (nomEquipement) {
-		case BOUCLIER:
-			diminueCoup = BOUCLIER_DIMINUE_COUP;
-			break;
-		case CASQUE:
-			diminueCoup = CASQUE_DIMINUE_COUP;
-			break;
-		case PLASTRON:
-			diminueCoup = PLASTRON_DIMINUE_COUP;
-			break;
-		}
+	@Override
+	public String toString() {
+		return nom;
 	}
 
+
+	public void setDiminueCoup(int diminueCoup) {
+		this.diminueCoup = diminueCoup;
+	}
 }

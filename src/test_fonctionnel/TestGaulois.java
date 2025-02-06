@@ -1,7 +1,7 @@
 package test_fonctionnel;
 
 import objets.Equipement;
-import objets.NomEquipement;
+import objets.Equipement;
 import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Grade;
@@ -76,7 +76,7 @@ public class TestGaulois {
 		/******** TP3 ******/
 		/*******************/
 		
-		/*Druide panoramix = new Druide("panoramix", 0); 
+		Druide panoramix = new Druide("panoramix", 0); 
 		panoramix.fabriquerPotionMagique(3, 2, 6);
 		
 		Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
@@ -104,15 +104,15 @@ public class TestGaulois {
 			if(minus.continuerCombat(asterix)) {
 				minus.frapper(asterix);
 			}
-		}*/
+		}
 		
 		/*******************/
-		/******** TP4 ******/
+		/******** TP3 ******/
 		/*******************/
-		Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
-		minus.sequiper(new Equipement(NomEquipement.BOUCLIER));
-		minus.sequiper(new Equipement(NomEquipement.CASQUE));
-		minus.sequiper(new Equipement(NomEquipement.PLASTRON));
+		/*Soldat minus = new Soldat("Minus", 6, Grade.SOLDAT);
+		minus.sequiper(Equipement.BOUCLIER);
+		minus.sequiper(Equipement.CASQUE);
+		minus.sequiper(Equipement.PLASTRON);
 		
 		
 		Druide panoramix = new Druide("panoramix", 0); 
@@ -140,7 +140,7 @@ public class TestGaulois {
 			if(minus.continuerCombat(asterix)) {
 				minus.frapper(asterix);
 			}
-		}
+		}*/
 		
 		
 	}

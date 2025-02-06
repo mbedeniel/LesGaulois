@@ -26,7 +26,7 @@ public class Camp {
 			this.commandant = commandant;
 			commandant.parler("Moi " + commandant.getNom() + " je prends la direction du camp romain.");
 		}
-		commandant.parler("Je ne suis pas suffisamment gradé pour prendre la direction du camp romain.");
+		commandant.parler("Je ne suis pas suffisamment grade pour prendre la direction du camp romain.");
 		return changementEffectue;
 	}
 
@@ -34,15 +34,15 @@ public class Camp {
 		boolean ajoutEffectue = nbSoldats < TAILLE_CAMP;
 		if (ajoutEffectue) {
 			lesSoldats[nbSoldats] = soldat;
-			soldat.parler("Je mets mon épée au service de Rome dans le camp dirigé par " + getCommandant().getNom());
+			soldat.parler("Je mets mon epee au service de Rome dans le camp dirige par " + getCommandant().getNom());
 			nbSoldats++;
 		}
-		commandant.parler("Désolé Ballondebaudrus notre camp est complet !");
+		commandant.parler("Desole Ballondebaudrus notre camp est complet !");
 		return ajoutEffectue;
 	}
 
 	public void afficherCamp() {
-		System.out.println("Le camp dirigé par " + getCommandant().getNom() + " contient les soldats : ");
+		System.out.println("Le camp dirige par " + getCommandant().getNom() + " contient les soldats : ");
 		for (int i = 0; i < nbSoldats; i++) {
 			System.out.println("- " + lesSoldats[i].getNom());
 		}

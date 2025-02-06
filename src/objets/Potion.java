@@ -10,16 +10,22 @@ public class Potion {
 		this.force = force;
 	}
 
-	public int getDose() {
-		return dose;
+	public int donnerDose() {
+		int forceDose = 1;
+		boolean resteDose = resteDose();
+		if (resteDose) {
+			dose--;
+			forceDose = force;
+		}
+		return forceDose;
+	}
+	
+	public boolean resteDose() {
+		return dose > 0;
 	}
 
 	public int getForce() {
 		return force;
-	}
-
-	public void setDose(int dose) {
-		this.dose = dose;
 	}
 
 }
