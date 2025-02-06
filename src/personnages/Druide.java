@@ -31,7 +31,7 @@ public class Druide extends Gaulois {
 		boolean etreObelix = nomGaulois.equals(GAULOIS_NON_AUTORISE);
 		boolean avoirBooste = false;
 		if (!etreObelix) {
-			boolean avoirPotion = potion != null && !potion.resteDose();
+			boolean avoirPotion = potion != null && potion.resteDose();
 			if (avoirPotion) {
 				gaulois.setEffetPotion(potion.donnerDose());
 				avoirBooste = true;

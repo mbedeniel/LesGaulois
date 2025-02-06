@@ -6,30 +6,20 @@ public enum Equipement {
 	BOUCLIER("bouclier",3);
 	
 	private String nom;
-	private int diminueCoup ;
+	private int resitanceChoc ;
 	
 	private Equipement (String nomEquipement,int diminueCoup) {
 		this.nom = nomEquipement;
-		this.setDiminueCoup(diminueCoup);
-	}
-	
-	
-	public String getNom() {
-		return nom;
+		this.resitanceChoc = diminueCoup;
 	}
 	
 
-	public int getDiminueCoup() {
-		return diminueCoup;
+	public int getResitanceChoc() {
+		return resitanceChoc;
 	}
 
 	@Override
 	public String toString() {
 		return nom;
-	}
-
-
-	public void setDiminueCoup(int diminueCoup) {
-		this.diminueCoup = diminueCoup;
 	}
 }

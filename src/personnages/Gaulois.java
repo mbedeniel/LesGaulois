@@ -18,17 +18,14 @@ public class Gaulois extends Personnage {
 		return "Gaulois";
 	}
 	
-	
-	public boolean frapperPotion(Romain romain) {
+	@Override
+	public int recupererForceCoup() {
 		boolean frapperPotion = effetPotion > 1;
-		int forceBooste = force*effetPotion; 
-		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup de force "+forceBooste+" au "
-				+ romain.donnerAuteur() + " " + romain.getNom() + ".");
-		romain.recevoirCoup(forceBooste);
+		int forceBosste = force*effetPotion;
 		if(frapperPotion) {
 			effetPotion -= 0.5;
 		}
-		return frapperPotion;
+		return forceBosste;
 	}
 
 	public static void main(String[] args) {

@@ -13,17 +13,13 @@ public class Soldat extends Romain {
 		this.grade = grade;
 	}
 
-	public Grade getGrade() {
-		return grade;
-	}
-	
-	
-	public Equipement[] getEquipements() {
-		return equipements;
-	}
-
 	public int getNbEquipement() {
 		return nbEquipement;
+	}
+
+	
+	public Grade getGrade() {
+		return grade;
 	}
 	
 	@Override
@@ -31,8 +27,8 @@ public class Soldat extends Romain {
 		Equipement equipement;
 		int quantiteAbsorde;
 		for (int i = 0; i < getNbEquipement() && coup >= 0; i++) {
-			equipement = getEquipements()[i];
-			quantiteAbsorde = equipement.getDiminueCoup();
+			equipement = equipements[i];
+			quantiteAbsorde = equipement.getResitanceChoc();
 			System.out.println("Le " + equipement.toString() + " absorbe " + quantiteAbsorde + " du coup");
 			coup -= quantiteAbsorde;
 		}
@@ -40,21 +36,12 @@ public class Soldat extends Romain {
 			coup = 0;
 		}
 
-		force -= coup;
-
-		if (force > 0) {
-			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << Aie >>. ");
-		} else {
-			force = 0;
-			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << J abandonne ... >>.");
-		}
+		super.recevoirCoup(coup);
 	}
-	
+
 	@Override
 	public void parler(String texte) {
-		String status;
-		status = getGrade().toString();
-		System.out.println("Le " + status + " " + nom + " : << " + texte + " >>.");
+		System.out.println("Le " + grade + " " + nom + " : << " + texte + " >>.");
 	}
 
 	public boolean sequiper(Equipement equipement) {
@@ -66,9 +53,9 @@ public class Soldat extends Romain {
 				}
 			}
 		}
-		System.out.println("Le " + grade.toString() + " " + nom + " s'equipe avec un "+equipement.toString()+".");
+		System.out.println("Le " + grade + " " + nom + " s'equipe avec un " + equipement + ".");
 		equipements[nbEquipement] = equipement;
-		nbEquipement++; 
+		nbEquipement++;
 		return !equipementReussi;
 	}
 }

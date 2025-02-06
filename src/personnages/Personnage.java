@@ -1,7 +1,5 @@
 package personnages;
 
-import objets.Equipement;
-
 public abstract class Personnage {
 	protected String nom;
 	protected int force;
@@ -14,6 +12,9 @@ public abstract class Personnage {
 	public String getNom() {
 		return nom;
 	}
+	public int getForce() {
+		return force;
+	}
 
 	public void parler(String texte) {
 		System.out.println("Le " + donnerAuteur() + " " + nom + " : << " + texte + " >>.");
@@ -21,9 +22,13 @@ public abstract class Personnage {
 
 	public void frapper(Personnage personnage) {
 		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup de force " + force + " au "+ personnage.donnerAuteur() + " " + personnage.getNom() + ".");
-		personnage.recevoirCoup(force);
+		personnage.recevoirCoup(recupererForceCoup());
 	}
-
+    
+	public int recupererForceCoup() {
+		return force;
+	}
+	
 	public void recevoirCoup(int coup) {
 
 		force -= coup;
@@ -34,10 +39,6 @@ public abstract class Personnage {
 			force = 0;
 			System.out.println("Le " + donnerAuteur() + " " + getNom() + " : << J abandonne ... >>.");
 		}
-	}
-
-	public boolean continuerCombat(Personnage personnage) {
-		return force > 0 && personnage.force > 0;
 	}
 
 	protected abstract String donnerAuteur();

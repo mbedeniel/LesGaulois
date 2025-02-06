@@ -6,14 +6,14 @@ public enum Grade {
 	OPTIO("optio"), 
 	CENTURION("centurion");
 	
-	private String grade;
+	private String nomGrade;
 	
 	private Grade(String grade) {
-		this.grade =grade;
+		this.nomGrade =grade;
 	}
 	
 	@Override
 	public String toString() {
-		return grade;
+		return nomGrade;
 	}
 }
