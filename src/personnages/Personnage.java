@@ -22,9 +22,10 @@ public abstract class Personnage {
 	}
 
 	public void frapper(Personnage personnage) {
-		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup de force " + force + " au "
-				+ personnage.donnerAuteur() + " " + personnage.getNom() + ".");
-		personnage.recevoirCoup(recupererForceCoup());
+		int forceCoup = recupererForceCoup();
+		System.out.println("Le " + donnerAuteur() + " " + getNom() + " donne un grand coup de force " + forceCoup
+				+ " au " + personnage.donnerAuteur() + " " + personnage.getNom() + ".");
+		personnage.recevoirCoup(forceCoup);
 	}
 
 	public int recupererForceCoup() {

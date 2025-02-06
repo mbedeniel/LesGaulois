@@ -25,14 +25,11 @@ public class Soldat extends Romain {
 	public void recevoirCoup(int coup) {
 		Equipement equipement;
 		int quantiteAbsorde;
-		for (int i = 0; i < getNbEquipement() && coup >= 0; i++) {
+		for (int i = 0; i < nbEquipement && coup > 0; i++) {
 			equipement = equipements[i];
 			quantiteAbsorde = equipement.getResitanceChoc();
 			System.out.println("Le " + equipement.toString() + " absorbe " + quantiteAbsorde + " du coup");
 			coup -= quantiteAbsorde;
-		}
-		if (coup < 0) {
-			coup = 0;
 		}
 
 		super.recevoirCoup(coup);
