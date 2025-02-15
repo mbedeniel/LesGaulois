@@ -62,3 +62,8 @@ Il implémente une structure avancée de **Programmation Orientée Objet (POO)**
 4️⃣ **Optimisation des combats et équilibrage des forces**  
 
 ---
+
+📬 Contact
+
+📧 Développeur : @mbedeniel
+💬 Discussions : Ouvrez une issue GitHub pour toute question ou suggestion !
