@@ -63,7 +63,14 @@ Il implémente une structure avancée de **Programmation Orientée Objet (POO)**
 
 ---
 
-📬 Contact
+## 📬 Contact
 
-📧 Développeur : @mbedeniel
-💬 Discussions : Ouvrez une issue GitHub pour toute question ou suggestion !
+Pour toute question, suggestion ou contribution, n'hésitez pas à me contacter via les plateformes suivantes :  
+
+- **📧 Email** : [mbedeniel@gmail.com](mailto:mbedeniel@gmail.com)  
+- **🐙 GitHub** : [@mbedeniel](https://github.com/mbedeniel)  
+- **💼 LinkedIn** : [Niel Mbede](https://www.linkedin.com/in/niel-mbede/)  
+- **🐛 Signaler un bug ou une amélioration** : [Issues GitHub](https://github.com/mbedeniel/LesGaulois/issues)  
+
+Je suis ouvert aux collaborations et aux discussions autour de ce projet. N’hésitez pas à me contacter ! 🚀  
+
